@@ -1,0 +1,7 @@
+- name: simple playbook to check operating system
+  hosts: host1
+  gather_facts: yes
+  tasks:
+  - name: Check if OS is Red Hat
+    debug: msg="Running on a Red Hat system!"
+    when: 

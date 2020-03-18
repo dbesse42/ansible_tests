@@ -4,4 +4,7 @@
   tasks:
   - name: Check if OS is Red Hat
     debug: msg="Running on a Red Hat system!"
-    when: 
+    when: ansible_os_family == "RedHat"
+  - name: Disp message if not Red Hat
+    debug: msg="NOT running on a Red Hat system!"
+    when: ansible_os_family != "RedHat"
